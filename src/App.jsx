@@ -16,7 +16,7 @@ function App() {
  
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-between dark:bg-gray-800">
        <Header  setRegion={setRegion} cntData={cntData}  />
        <Main region ={region} cntData={cntData} />
        <Footer />

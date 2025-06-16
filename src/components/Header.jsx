@@ -24,7 +24,7 @@ function Header({ cntData, setRegion }) {
     <>
       <Sidebar status={status} setStatus={setStatus} />
       <header className="p-4 bg-white text-violet-600 dark:bg-gray-800 dark:text-gray-100">
-        <div className="container flex justify-between items-center h-16 ">
+        <div className="container flex justify-between items-center h-16 mx-auto ">
           <a
             rel="noopener noreferrer"
             href="#"

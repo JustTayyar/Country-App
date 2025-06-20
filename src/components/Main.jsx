@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import Card from "./Card";
 import Title from "./Title";
 import RandomCard from "../RandomCrad";
+import { useParams } from "react-router-dom";
 
-function Main({ cntData, region }) {
+function Main({ cntData }) {
+
+  const { region } = useParams();
+  console.log(region)
+
+
   const [show, setShow] = useState(null);
   const [showRandom, setShowRandom] = useState(false);
   const [showSearch, setShowSearch] = useState(false);

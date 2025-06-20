@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 function Title({ setShow, handleToggle, handleOpenSearch, showRandom, showSearch,  }) {
+
+  const inpRef = useRef(null);
+  useEffect(() => {
+    if (showSearch) {
+      inpRef.current.focus();
+    }
+  }, [showSearch]);
   return (
     <div>
       <section className="dark:bg-gray-800 dark:text-gray-100">
@@ -25,6 +32,7 @@ function Title({ setShow, handleToggle, handleOpenSearch, showRandom, showSearch
               {showSearch ? "Close Search" : "Open Search"}
             </button>
             <input
+              ref={inpRef}
               onChange={(e) => setShow(e.target.value)}
               type="search"
               placeholder="Search..."
